@@ -18,7 +18,7 @@ const format = createFormat("en", { dateStyle: "medium", timeStyle: "medium" })
 const str = format(date) // date can be a Date object, timestamp, or ISO string.
 ```
 
-## Reuse locale
+## Partials
 
 ```ts
 import { createPartial } from "intl-datetimeformat"
