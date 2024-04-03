@@ -1,0 +1,40 @@
+{
+  "name": "intl-datetimeformat",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Simplified Intl.DateTimeFormat formatters.",
+  "author": "Ilya Semenov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlyaSemenov/intl-datetimeformat"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "!src/**/*.test.*",
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint --fix .",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm build",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.12.1",
+    "@changesets/cli": "^2.27.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "tsconfig-vite-node": "^1.1.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.4.0"
+  }
+}
