@@ -1,7 +1,7 @@
 {
   "name": "intl-datetimeformat",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Simplified Intl.DateTimeFormat formatters.",
   "author": "Ilya Semenov",
   "license": "MIT",
