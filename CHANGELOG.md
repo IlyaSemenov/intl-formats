@@ -1,4 +1,4 @@
-# intl-datetimeformat
+# intl-formats
 
 ## 1.0.0
 

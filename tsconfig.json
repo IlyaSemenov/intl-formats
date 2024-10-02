@@ -2,7 +2,7 @@
   "extends": "tsconfig-vite-node",
   "compilerOptions": {
     "paths": {
-      "intl-datetimeformat": ["./src"]
+      "intl-formats": ["./src"]
     }
   }
 }

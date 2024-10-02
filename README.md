@@ -1,32 +1,43 @@
-# intl-datetimeformat
+# intl-formats
 
-A simple wrapper around `Intl.DateTimeFormat`.
+High-order functional wrappers around `Intl.DateTimeFormat` and `Intl.NumberFormat`.
 
 ## Install
 
 ```sh
-npm install intl-datetimeformat
+npm install intl-formats
 ```
 
-## Use
+## Format values
 
 ```ts
-import { createFormat } from "intl-datetimeformat"
+import { createDateFormat, createNumberFormat } from "intl-formats"
 
-const format = createFormat("en", { dateStyle: "medium", timeStyle: "medium" })
+// Create formatters.
+const formatDate = createDateFormat("en", { dateStyle: "medium", timeStyle: "medium" })
+const formatNumber = createDateFormat("en", { minimumFractionDigits: 2 })
 
-const str = format(date) // date can be a Date object, timestamp, or ISO string.
+// Format Date object, timestamp, or ISO string.
+const strDate = formatDate(new Date()) // Apr 19, 2024, 3:50:42 PM
+
+// Format number or bigint.
+const strNumber = formatNumber(12345) // 12,345.00
 ```
 
-## Partials
+## Create formatter factory
 
 ```ts
-import { createPartial } from "intl-datetimeformat"
+import { createDateFormatFactory, createNumberFormatFactory } from "intl-formats"
 
-// Format dates in German.
-const createFormat = createPartial("de")
+// Format dates and numbers in German.
+const createGermanDateFormat = createDateFormatFactory("de")
+const createGermanNumberFormat = createNumberFormatFactory("de")
 
-const format = createFormat({ dateStyle: "medium", timeStyle: "medium" })
+// Create formatters.
+const formatDate = createGermanDateFormat({ dateStyle: "medium" })
+const formatNumber = createGermanNumberFormat({ minimumFractionDigits: 2 })
 
-const str = format(date)
+// Format values.
+const strDate = formatDate(new Date()) // 19.04.2024, 15:50:42
+const strNumber = formatNumber(12345) // 12.345,00
 ```
