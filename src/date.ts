@@ -10,10 +10,7 @@ export function createDateFormat(locales?: string | string[], options?: Intl.Dat
    * @argument date - Date, timestamp or ISO string.
    */
   return function format(date: Date | number | string): string {
-    if (typeof date === "string") {
-      date = new Date(date)
-    }
-    return intlFormat.format(date)
+    return intlFormat.format(typeof date === "string" ? new Date(date) : date)
   }
 }
 

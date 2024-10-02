@@ -7,8 +7,9 @@ export function createNumberFormat(locales?: string | string[], options?: Intl.N
   /**
    * Format number.
    */
-  return function format(value: number | bigint): string {
-    return intlFormat.format(value)
+  return function format(value: number | bigint | string): string {
+    // Cast to number because typescript/lib.es5.d.ts wrongly tells that string is not supported.
+    return intlFormat.format(value as number)
   }
 }
 

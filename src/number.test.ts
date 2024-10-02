@@ -14,6 +14,7 @@ describe("createNumberFormat", () => {
     const format = createNumberFormat("en", { minimumFractionDigits: 2 })
     expect(format(12345)).toBe("12,345.00")
     expect(format(12345678901234567890123456789n)).toBe("12,345,678,901,234,567,890,123,456,789.00")
+    expect(format("12345678901234567890123456789.56789")).toBe("12,345,678,901,234,567,890,123,456,789.568")
   })
 
   test("locales", () => {
