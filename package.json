@@ -1,7 +1,7 @@
 {
   "name": "intl-formats",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "packageManager": "pnpm@9.8.0",
   "description": "Simplified Intl.DateTimeFormat formatters.",
   "author": "Ilya Semenov",
