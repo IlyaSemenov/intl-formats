@@ -31,9 +31,9 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.12.1",
     "@changesets/cli": "^2.27.1",
-    "eslint": "^8.57.0",
+    "@ilyasemenov/lint-config": "^1.1.1",
+    "eslint": "^9.11.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "tsconfig-vite-node": "^1.1.2",
