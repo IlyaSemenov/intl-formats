@@ -30,12 +30,12 @@ const strNumber = formatNumber(12345) // 12,345.00
 import { createDateFormatFactory, createNumberFormatFactory } from "intl-formats"
 
 // Format dates and numbers in German.
-const createGermanDateFormat = createDateFormatFactory("de")
-const createGermanNumberFormat = createNumberFormatFactory("de")
+const createDateFormat = createDateFormatFactory("de")
+const createNumberFormat = createNumberFormatFactory("de")
 
 // Create formatters.
-const formatDate = createGermanDateFormat({ dateStyle: "medium" })
-const formatNumber = createGermanNumberFormat({ minimumFractionDigits: 2 })
+const formatDate = createDateFormat({ dateStyle: "medium" })
+const formatNumber = createNumberFormat({ minimumFractionDigits: 2 })
 
 // Format values.
 const strDate = formatDate(new Date()) // 19.04.2024, 15:50:42
