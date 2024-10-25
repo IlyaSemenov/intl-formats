@@ -15,7 +15,7 @@ import { createDateFormat, createNumberFormat } from "intl-formats"
 
 // Create formatters.
 const formatDate = createDateFormat("en", { dateStyle: "medium", timeStyle: "medium" })
-const formatNumber = createDateFormat("en", { minimumFractionDigits: 2 })
+const formatNumber = createNumberFormat("en", { minimumFractionDigits: 2 })
 
 // Format Date object, timestamp, or ISO string.
 const strDate = formatDate(new Date()) // Apr 19, 2024, 3:50:42 PM
