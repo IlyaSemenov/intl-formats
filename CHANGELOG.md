@@ -1,5 +1,11 @@
 # intl-formats
 
+## 2.1.1
+
+### Patch Changes
+
+- 42334ba: Remove `"engines"` from `package.json`.
+
 ## 2.1.0
 
 ### Minor Changes
