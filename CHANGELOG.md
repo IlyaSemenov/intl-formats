@@ -1,5 +1,11 @@
 # intl-formats
 
+## 2.2.0
+
+### Minor Changes
+
+- ab74a47: Support custom number types, such as `Decimal` from `decimal.js`.
+
 ## 2.1.1
 
 ### Patch Changes
