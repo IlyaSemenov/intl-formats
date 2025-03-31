@@ -26,6 +26,9 @@ importers:
       tsconfig-vite-node:
         specifier: ^1.1.2
         version: 1.1.2
+      tstyche:
+        specifier: ^3.5.0
+        version: 3.5.0(typescript@5.6.2)
       tsup:
         specifier: ^8.3.0
         version: 8.3.0(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
@@ -3060,6 +3063,16 @@ packages:
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
+  tstyche@3.5.0:
+    resolution: {integrity: sha512-N4SUp/ZWaMGEcglpVFIzKez0GQEiBdfFDgcnqwv9O1mePZgos8N1cZCzNgGtPGo/w0ym04MjJcDnsw1sorEzgA==}
+    engines: {node: '>=18.19'}
+    hasBin: true
+    peerDependencies:
+      typescript: 4.x || 5.x
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   tsup@8.3.0:
     resolution: {integrity: sha512-ALscEeyS03IomcuNdFdc0YWGVIkwH1Ws7nfTbAPuoILvEV2hpGQAY72LIOjglGo4ShWpZfpBqP/jpQVCzqYQag==}
@@ -6686,6 +6699,10 @@ snapshots:
   tsconfig-vite-node@1.1.2: {}
 
   tslib@2.7.0: {}
+
+  tstyche@3.5.0(typescript@5.6.2):
+    optionalDependencies:
+      typescript: 5.6.2
 
   tsup@8.3.0(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1):
     dependencies:

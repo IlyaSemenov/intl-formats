@@ -21,6 +21,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "!src/**/*.test.*",
+    "!src/**/*.tst.*",
     "dist",
     "src"
   ],
@@ -29,7 +30,7 @@
     "lint": "eslint --fix .",
     "prepare": "husky",
     "prepublishOnly": "pnpm build",
-    "test": "vitest run"
+    "test": "vitest run && tstyche"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -38,6 +39,7 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "tsconfig-vite-node": "^1.1.2",
+    "tstyche": "^3.5.0",
     "tsup": "^8.3.0",
     "typescript": "^5.6.2",
     "vite-tsconfig-paths": "^5.0.1",

@@ -41,3 +41,19 @@ const formatNumber = createNumberFormat({ minimumFractionDigits: 2 })
 const strDate = formatDate(new Date()) // 19.04.2024, 15:50:42
 const strNumber = formatNumber(12345) // 12.345,00
 ```
+
+## Custom number types
+
+To support formatting custom number types, such as `Decimal` coming from `decimal.js`, pass a generic type to either `createNumberFormat` or `createNumberFormatFactory`:
+
+```ts
+import type { Decimal } from "decimal.js"
+import { createNumberFormatFactory, type Numberish } from "intl-formats"
+
+const createNumberFormat = createNumberFormatFactory<Numberish | Decimal>("de")
+const formatNumber = createNumberFormat({ minimumFractionDigits: 2 })
+
+formatNumber(new Decimal("123.456")) // Type checked.
+```
+
+The respective objects should have proper `toString()` implementation for this to actually work in runtime.
