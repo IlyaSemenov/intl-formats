@@ -24,12 +24,30 @@ describe("createDateFormat", () => {
     const formatDe = createDateFormat("de", { dateStyle: "medium", timeStyle: "medium", timeZone: "UTC" })
     expect(formatDe("2022-02-01")).toBe("01.02.2022, 00:00:00")
   })
+
+  test("default locale", () => {
+    const format = createDateFormat()
+    expect(format("2022-02-01")).toBeTypeOf("string") // Depends on the user's locale, so not checking particular format.
+  })
+
+  test("options only", () => {
+    const format = createDateFormat({ dateStyle: "medium", timeZone: "UTC" })
+    expect(format("2022-02-01")).toBeTypeOf("string") // Depends on the user's locale, so not checking particular format.
+  })
 })
 
-test("createDateFormatFactory", () => {
-  const createDateFormat = createDateFormatFactory("de")
-  const format1 = createDateFormat({ dateStyle: "medium", timeZone: "UTC" })
-  const format2 = createDateFormat({ dateStyle: "medium", timeStyle: "medium", timeZone: "UTC" })
-  expect(format1("2022-02-01")).toBe("01.02.2022")
-  expect(format2("2022-02-01")).toBe("01.02.2022, 00:00:00")
+describe("createDateFormatFactory", () => {
+  test("locale", () => {
+    const createDateFormat = createDateFormatFactory("de")
+    const format1 = createDateFormat({ dateStyle: "medium", timeZone: "UTC" })
+    const format2 = createDateFormat({ dateStyle: "medium", timeStyle: "medium", timeZone: "UTC" })
+    expect(format1("2022-02-01")).toBe("01.02.2022")
+    expect(format2("2022-02-01")).toBe("01.02.2022, 00:00:00")
+  })
+
+  test("default locale", () => {
+    const createDateFormat = createDateFormatFactory()
+    const format = createDateFormat({ dateStyle: "medium", timeZone: "UTC" })
+    expect(format("2022-02-01")).toBeTypeOf("string") // Depends on the user's locale, so not checking particular format.
+  })
 })

@@ -13,7 +13,11 @@ npm install intl-formats
 ```ts
 import { createDateFormat, createNumberFormat } from "intl-formats"
 
-// Create formatters.
+// Create formatters using system default locale.
+const formatDate = createDateFormat({ dateStyle: "medium", timeStyle: "medium" })
+const formatNumber = createNumberFormat({ minimumFractionDigits: 2 })
+
+// ...or with specific locale.
 const formatDate = createDateFormat("en", { dateStyle: "medium", timeStyle: "medium" })
 const formatNumber = createNumberFormat("en", { minimumFractionDigits: 2 })
 

@@ -24,12 +24,30 @@ describe("createNumberFormat", () => {
     const formatDe = createNumberFormat("de", { minimumFractionDigits: 2 })
     expect(formatDe(12345)).toBe("12.345,00")
   })
+
+  test("default locale", () => {
+    const format = createNumberFormat()
+    expect(format(12345)).toBeTypeOf("string") // Depends on the user's locale, so not checking particular format.
+  })
+
+  test("options only", () => {
+    const format = createNumberFormat({ minimumFractionDigits: 2 })
+    expect(format(12345)).toBeTypeOf("string") // Depends on the user's locale, so not checking particular format.
+  })
 })
 
-test("createNumberFormatFactory", () => {
-  const createNumberFormat = createNumberFormatFactory("de")
-  const format1 = createNumberFormat({ minimumFractionDigits: 2 })
-  const format2 = createNumberFormat({ minimumFractionDigits: 4 })
-  expect(format1(12345)).toBe("12.345,00")
-  expect(format2(12345)).toBe("12.345,0000")
+describe("createNumberFormatFactory", () => {
+  test("locale", () => {
+    const createNumberFormat = createNumberFormatFactory("de")
+    const format1 = createNumberFormat({ minimumFractionDigits: 2 })
+    const format2 = createNumberFormat({ minimumFractionDigits: 4 })
+    expect(format1(12345)).toBe("12.345,00")
+    expect(format2(12345)).toBe("12.345,0000")
+  })
+
+  test("default locale", () => {
+    const createNumberFormat = createNumberFormatFactory()
+    const format = createNumberFormat({ minimumFractionDigits: 2 })
+    expect(format(12345)).toBeTypeOf("string") // Depends on the user's locale, so not checking particular format.
+  })
 })
