@@ -52,7 +52,8 @@ To support formatting custom number types, such as `Decimal` coming from `decima
 
 ```ts
 import type { Decimal } from "decimal.js"
-import { createNumberFormatFactory, type Numberish } from "intl-formats"
+import { createNumberFormatFactory } from "intl-formats"
+import type { Numberish } from "intl-formats"
 
 const createNumberFormat = createNumberFormatFactory<Numberish | Decimal>("de")
 const formatNumber = createNumberFormat({ minimumFractionDigits: 2 })

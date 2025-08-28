@@ -1,6 +1,7 @@
 import { expect, test } from "tstyche"
 
-import { createNumberFormat, createNumberFormatFactory, type Numberish } from "./number"
+import { createNumberFormat, createNumberFormatFactory } from "./number"
+import type { Numberish } from "./number"
 
 class Decimal {
   _foo = 1 // prevent boolean from being accepted as a Decimal object
