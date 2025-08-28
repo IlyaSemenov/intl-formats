@@ -35,9 +35,6 @@ importers:
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
-      vite-tsconfig-paths:
-        specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.2)(vite@5.2.7)
       vitest:
         specifier: ^2.1.1
         version: 2.1.1
@@ -2445,16 +2442,6 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
-  tsconfck@3.0.3:
-    resolution: {integrity: sha512-4t0noZX9t6GcPTfBAbIbbIU4pfpCwh0ueq3S4O/5qXI1VwK1outmxhe9dOiEWqMz3MW2LKgDTpqWV+37IWuVbA==}
-    engines: {node: ^18 || >=20}
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   tsconfig-vite-node@1.1.2:
     resolution: {integrity: sha512-7QOQ0Rq6NrRjQVPVETQlGsEf6CkHjD+Xxio5EnPe/+IZabhdmaTZ3iRxaHBuEfWKyA8CnjmjLxat263+Pd1Iyw==}
 
@@ -2543,14 +2530,6 @@ packages:
     resolution: {integrity: sha512-N/mGckI1suG/5wQI35XeR9rsMsPqKXzq1CdUndzVstBj/HvyxxGctwnK6WX43NGt5L3Z5tcRf83g4TITKJhPrA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
-
-  vite-tsconfig-paths@5.0.1:
-    resolution: {integrity: sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==}
-    peerDependencies:
-      vite: '*'
-    peerDependenciesMeta:
-      vite:
-        optional: true
 
   vite@5.2.7:
     resolution: {integrity: sha512-k14PWOKLI6pMaSzAuGtT+Cf0YmIx12z9YGon39onaJNy8DLBfBJrzg9FQEmkAM5lpHBZs9wksWAsyF/HkpEwJA==}
@@ -5277,10 +5256,6 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsconfck@3.0.3(typescript@5.6.2):
-    optionalDependencies:
-      typescript: 5.6.2
-
   tsconfig-vite-node@1.1.2: {}
 
   tslib@1.14.1: {}
@@ -5379,17 +5354,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
-  vite-tsconfig-paths@5.0.1(typescript@5.6.2)(vite@5.2.7):
-    dependencies:
-      debug: 4.4.1
-      globrex: 0.1.2
-      tsconfck: 3.0.3(typescript@5.6.2)
-    optionalDependencies:
-      vite: 5.2.7
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
 
   vite@5.2.7:
     dependencies:
