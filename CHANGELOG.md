@@ -1,5 +1,11 @@
 # intl-formats
 
+## 2.3.0
+
+### Minor Changes
+
+- 5b58b05: Add function overloads to allow calling with options only (without specifying locales).
+
 ## 2.2.0
 
 ### Minor Changes
