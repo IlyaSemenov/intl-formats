@@ -28,6 +28,8 @@ const strDate = formatDate(new Date()) // Apr 19, 2024, 3:50:42 PM
 const strNumber = formatNumber(12345) // 12,345.00
 ```
 
+> 💡 **PRO TIP:** In browsers, you will usually want to use `navigator.languages[0]` for the locale!
+
 ## Create formatter factory
 
 ```ts
