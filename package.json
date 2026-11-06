@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.3.0",
   "packageManager": "pnpm@9.8.0",
-  "description": "Simplified Intl.DateTimeFormat formatters.",
+  "description": "Functional wrappers around Intl.DateTimeFormat and Intl.NumberFormat.",
   "author": "Ilya Semenov",
   "license": "MIT",
   "repository": {
